@@ -1,0 +1,9 @@
+<h3>Q{{ index + 1 }}: {{ question['question'] }}</h3>
+<form method="POST" action="/quiz?q={{ index + 1 }}">
+  {% for opt in ['a','b','c','d'] %}
+    <input type="radio" name="answer" value="{{ question[opt] }}"> {{ question[opt] }}<br>
+  {% endfor %}
+  <input type="hidden" name="correct" value="{{ question['correct'] }}">
+  <button type="submit">Next</button>
+</form>
+<p>Current Score: {{ session['score'] }}</p>

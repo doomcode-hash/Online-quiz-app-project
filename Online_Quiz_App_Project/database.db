@@ -1,0 +1,9 @@
+CREATE TABLE questions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  question TEXT,
+  a TEXT,
+  b TEXT,
+  c TEXT,
+  d TEXT,
+  correct TEXT
+);
